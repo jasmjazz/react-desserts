@@ -34,6 +34,20 @@
   margin-bottom: 140px;
 }
 
+.content-top-box{
+  width: 460px;
+  height: 460px;
+  margin-top: -20px;
+  overflow: hidden;
+}
+
+.content-top-box img{
+  position: relative;
+  top: -120px;
+}
+
+
+
 .content-middle{
   height: 420px;
   background-color: #EAF0ED;
@@ -46,7 +60,6 @@
   margin-bottom: 140px;
 }
 
-.btn{
-  background-color: #EAF0ED;
-  color: black;
+.card-text{
+  text-align: center;
 }
