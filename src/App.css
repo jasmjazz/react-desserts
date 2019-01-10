@@ -1,0 +1,52 @@
+.nav-title{
+  color: #3F5D45;
+}
+
+.nav-menu span{
+  color: #3F5D45;
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.banner{
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.banner img{
+  width: 100%;
+  margin-top: -175px;
+}
+
+@media (max-width: 400px){
+  .banner img{
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.content-top{
+  height: 420px;
+  background-color: #EAF0ED;
+  margin-top: 340px;
+  margin-bottom: 140px;
+}
+
+.content-middle{
+  height: 420px;
+  background-color: #EAF0ED;
+  margin-bottom: 140px;
+}
+
+.content-bottom{
+  height: 420px;
+  background-color: #EAF0ED;
+  margin-bottom: 140px;
+}
+
+.btn{
+  background-color: #EAF0ED;
+  color: black;
+}
