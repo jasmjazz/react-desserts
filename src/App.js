@@ -18,6 +18,7 @@ import {
 import './App.css';
 import banner_img from './img/banner.jpg';
 import content_top from './img/content-top.jpg';
+import content_middle from './img/content-middle.jpg';
 import footer_left from './img/footer-left.jpg';
 import footer_middle from './img/footer-middle.jpg';
 import footer_right from './img/footer-right.jpg';
@@ -71,27 +72,109 @@ class App extends Component {
           <img src={banner_img} className="img-fluid" alt="banner-img" />
         </div>
 
-
-
-        <div className="container-fluid content-top">
-          <div className="container">
-            <Row>
-              <Col xs="4">
-                <div className="content-top-box">
-                  <img src={content_top} className="img-fluid" alt="banner-img" />
-                </div>
-              </Col>
-              <Col xs="4">.col-6</Col>
-              <Col xs="4">.col-6</Col>
-            </Row>
+        <div className="container">
+          <div className="row justify-content-center banner-box">
+            <div className="col col-lg-3 banner-box-left-down">
+              <div className="banner-box-left-up">
+                <p>本日精選</p>
+              </div>
+            </div>
+            <div className="col col-lg-3 banner-box-middle-down">
+              <div className="banner-box-middle-up">
+                <p>人氣推薦</p>
+              </div>
+            </div>
+            <div className="col col-lg-3 banner-box-right-down">
+              <div className="banner-box-right-up">
+                <p>新品上市</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="container-fluid content-middle">123</div>
-
-        <div className="container-fluid content-bottom">123
-          
+        <div className="container content-top">
+          <div className="row">
+            <div class="col">
+              <div className="content-img">
+                <img src={content_top} className="img-fluid" alt="banner-img" />
+              </div>
+            </div>
+            <div class="col-md-auto content-top-middle">
+              <p style={{ paddingLeft: "30px" }}>
+                滾滾長江東逝水，浪花淘盡英雄。<br />
+                是非成敗轉頭空。<br />
+                青山依舊在，幾度夕陽紅。<br />
+                白髮漁樵江渚上，慣看秋月春風。<br />
+                一壺濁酒喜相逢。<br />
+                古今多少事，都付笑談中。
+              </p>
+              <div></div>
+              <p>
+                庭院深深深幾許，雲窗霧閣常扃，<br />
+                柳梢梅萼漸分明，春歸秣陵樹，<br />
+                人老建康城。
+              </p>
+            </div>
+            <div class="col col-lg-2 content-top-right">
+              <p>
+                <strong>為什麼</strong>
+                <span>｜</span>
+              </p>
+              <p>
+                <strong>&nbsp;選擇了做甜點？</strong>
+              </p>
+            </div>
+          </div>
         </div>
+
+        <div className="container content-mid">
+          <div className="row">
+            <div class="col col-rg-2 content-mid-left">
+            <p>
+                滾滾長江東逝水，浪花淘盡英雄。<br />
+                是非成敗轉頭空。<br />
+                青山依舊在，幾度夕陽紅。<br />
+                白髮漁樵江渚上，慣看秋月春風。<br />
+                一壺濁酒喜相逢。<br />
+                古今多少事，都付笑談中。
+              </p>
+              <div></div>
+            <p style={{ paddingRight: "45px" }}>
+                庭院深深深幾許，雲窗霧閣常扃，<br />
+                柳梢梅萼漸分明，春歸秣陵樹，<br />
+                人老建康城。
+              </p>
+            </div>
+            <div class="col-md-auto content-mid-middle">
+              <p>
+                <strong>為什麼</strong>
+                <span>｜</span>
+              </p>
+              <p>
+                <strong>&nbsp;一定要吃甜點？</strong>
+              </p>
+            </div>
+            <div class="col content-mid-right">
+              <div className="content-img-right">
+                <img src={content_middle} className="img-fluid" alt="banner-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="container content-bottom">
+          <div className="row">
+            <div className="col">
+              <p>
+                <strong>想吃甜點</strong>
+                <span>｜</span>
+              </p>
+              <p>
+                <strong>&nbsp;是不需要理由的。</strong>
+              </p>
+            </div>
+          </div>
+        </div> */}
 
         <div className="container">
           <Row>
@@ -106,21 +189,25 @@ class App extends Component {
                     </Row>
                   </CardText>
                 </CardBody>
-                <Button bsSize="large" block color="info">加入購物車</Button>
+                <Button bsSize="large" block color="info">
+                  加入購物車
+                </Button>
               </Card>
             </Col>
             <Col xs={6} md={4}>
               <Card>
                 <CardImg top className="img-fluid" src={footer_middle} alt="Card image cap" />
                 <CardBody>
-                <CardText className="card-text">
-                  <Row>
-                    <Col xs="6">焦糖馬卡龍</Col>
-                    <Col xs="6">NT$450</Col>
-                  </Row>
-                </CardText>
+                  <CardText className="card-text">
+                    <Row>
+                      <Col xs="6">焦糖馬卡龍</Col>
+                      <Col xs="6">NT$450</Col>
+                    </Row>
+                  </CardText>
                 </CardBody>
-                <Button bsSize="large" block color="info">加入購物車</Button>
+                <Button bsSize="large" block color="info">
+                  加入購物車
+                </Button>
               </Card>
             </Col>
             <Col xs={6} md={4}>
@@ -128,18 +215,19 @@ class App extends Component {
                 <CardImg top className="img-fluid" src={footer_right} alt="Card image cap" />
                 <CardBody>
                   <CardText className="card-text">
-                  <Row>
-                    <Col xs="6">水果優格杯</Col>
-                    <Col xs="6">NT$450</Col>
-                  </Row>
+                    <Row>
+                      <Col xs="6">水果優格杯</Col>
+                      <Col xs="6">NT$450</Col>
+                    </Row>
                   </CardText>
                 </CardBody>
-                <Button bsSize="large" block color="info">加入購物車</Button>
+                <Button bsSize="large" block color="info">
+                  加入購物車
+                </Button>
               </Card>
             </Col>
           </Row>
         </div>
-
       </div>;
   }
 }
