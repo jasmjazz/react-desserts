@@ -37,6 +37,7 @@ class App extends Component {
       isOpen: !this.state.isOpen
     });
   }
+  
 
   render() {
     return <div>
@@ -73,19 +74,19 @@ class App extends Component {
         </div>
 
         <div className="container">
-          <div className="row justify-content-center banner-box">
-            <div className="col col-lg-3 banner-box-left-down">
-              <div className="banner-box-left-up">
+          <div className="row justify-content-center box">
+            <div className="col col-lg-3 box-left-bg">
+              <div className="box-left-text">
                 <p>本日精選</p>
               </div>
             </div>
-            <div className="col col-lg-3 banner-box-middle-down">
-              <div className="banner-box-middle-up">
+            <div className="col col-lg-3 box-middle-bg">
+              <div className="box-middle-text">
                 <p>人氣推薦</p>
               </div>
             </div>
-            <div className="col col-lg-3 banner-box-right-down">
-              <div className="banner-box-right-up">
+            <div className="col col-lg-3 box-right-bg">
+              <div className="box-right-text">
                 <p>新品上市</p>
               </div>
             </div>
@@ -94,13 +95,13 @@ class App extends Component {
 
         <div className="container content-top">
           <div className="row">
-            <div class="col">
-              <div className="content-img">
+            <div className="col">
+              <div className="content-top-img">
                 <img src={content_top} className="img-fluid" alt="banner-img" />
               </div>
             </div>
-            <div class="col-md-auto content-top-middle">
-              <p style={{ paddingLeft: "30px" }}>
+            <div className="col-md-auto content-top-middle">
+              <p>
                 滾滾長江東逝水，浪花淘盡英雄。<br />
                 是非成敗轉頭空。<br />
                 青山依舊在，幾度夕陽紅。<br />
@@ -115,10 +116,10 @@ class App extends Component {
                 人老建康城。
               </p>
             </div>
-            <div class="col col-lg-2 content-top-right">
+            <div className="col col-lg-2 content-top-right">
               <p>
                 <strong>為什麼</strong>
-                <span>｜</span>
+                <span className="span">—</span>
               </p>
               <p>
                 <strong>&nbsp;選擇了做甜點？</strong>
@@ -129,8 +130,8 @@ class App extends Component {
 
         <div className="container content-mid">
           <div className="row">
-            <div class="col col-rg-2 content-mid-left">
-            <p>
+            <div className="col col-rg-2 content-mid-left">
+              <p>
                 滾滾長江東逝水，浪花淘盡英雄。<br />
                 是非成敗轉頭空。<br />
                 青山依舊在，幾度夕陽紅。<br />
@@ -138,45 +139,44 @@ class App extends Component {
                 一壺濁酒喜相逢。<br />
                 古今多少事，都付笑談中。
               </p>
-              <div></div>
-            <p style={{ paddingRight: "45px" }}>
+              <p style={{ paddingRight: "45px" }}>
                 庭院深深深幾許，雲窗霧閣常扃，<br />
                 柳梢梅萼漸分明，春歸秣陵樹，<br />
                 人老建康城。
               </p>
             </div>
-            <div class="col-md-auto content-mid-middle">
+            <div className="col-md-auto content-mid-middle">
               <p>
                 <strong>為什麼</strong>
-                <span>｜</span>
+                <span>—</span>
               </p>
               <p>
                 <strong>&nbsp;一定要吃甜點？</strong>
               </p>
             </div>
-            <div class="col content-mid-right">
-              <div className="content-img-right">
+            <div className="col content-mid-right">
+              <div className="content-mid-img">
                 <img src={content_middle} className="img-fluid" alt="banner-img" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* <div className="container content-bottom">
+        <div className="container content-bottom">
           <div className="row">
             <div className="col">
               <p>
                 <strong>想吃甜點</strong>
-                <span>｜</span>
+                <span>—</span>
               </p>
               <p>
                 <strong>&nbsp;是不需要理由的。</strong>
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="container">
+        <div className="container footer">
           <Row>
             <Col xs={6} md={4}>
               <Card>
@@ -193,7 +193,7 @@ class App extends Component {
                   加入購物車
                 </Button>
               </Card>
-            </Col>
+            </Col>    
             <Col xs={6} md={4}>
               <Card>
                 <CardImg top className="img-fluid" src={footer_middle} alt="Card image cap" />
@@ -228,6 +228,31 @@ class App extends Component {
             </Col>
           </Row>
         </div>
+
+        <div className="container footer-rwd">
+          <Row>
+            <Col>
+              <Card>
+                <CardImg top className="img-fluid" src={footer_right} alt="Card image cap" />
+                <CardBody>
+                  <CardText className="card-text">
+                    <Row>
+                      <Col xs="6">水果優格杯</Col>
+                      <Col xs="6">NT$450</Col>
+                    </Row>
+                  </CardText>
+                </CardBody>
+                <Button bsSize="large" block color="info">
+                  加入購物車
+                </Button>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+
+
+
+
       </div>;
   }
 }
